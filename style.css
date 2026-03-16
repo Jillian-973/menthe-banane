@@ -11,7 +11,6 @@
 /*-------------- GENERAL --------------*/
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Lexend", sans-serif;
 }
@@ -40,7 +39,6 @@ nav {
   a {
     text-decoration: none;
     color: var(--black);
-    
   }
 
   ul {
@@ -84,9 +82,9 @@ nav {
   padding: 80px 20px;
 
   background: linear-gradient(
-    45deg,
+    145deg,
     rgba(244, 245, 196, 0.15) 0%,
-     rgba(168, 221, 181, 0.15) 100%
+    rgba(168, 221, 181, 0.15) 100%
   );
 }
 
@@ -95,25 +93,25 @@ nav {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 90px;
   margin-bottom: 20px;
   font-weight: 700;
 
-  span{
-  font-family: "Ubuntu";
-   color: var(--dark-green);
+  span {
+    font-family: "Ubuntu";
+    color: var(--dark-green);
   }
 }
 
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 24px;
   color: var(--black);
   margin-bottom: 40px;
   font-weight: 500;
 }
 
 hr {
-  border: 2px solid var(--green);
+  border: 2px solid var(--light-yellow);
 }
 
 footer {
@@ -166,6 +164,14 @@ footer {
 .section {
   max-width: 80%;
   margin: 0 auto;
+  padding: 4rem;
+  text-align: center;
+}
+
+.section-2 {
+  max-width: 80%;
+  margin: 4rem auto;
+  padding: 4rem;
 }
 
 /*-------------- BLOG --------------*/
@@ -201,7 +207,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 1000px;
+  max-width: 80%;
   margin: auto;
 }
 
@@ -242,7 +248,121 @@ p {
   line-height: 1.4;
 }
 
-/*FAQ*/
+/*-------- FAQ -------*/
+
+.newsletter h2 {
+  color: var(--dark-green);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 64px;
+}
+
+/* CARD */
+.newsletter > div {
+  background: white;
+  padding:60px 10%;
+  border-radius: 18px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* TITLES */
+.newsletter h3 {
+  margin-bottom: 1rem;
+  color: var(--dark-green);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.newsletter {
+  p {
+    color: var(--dark-green);
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+/* FORM */
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+form {
+  label {
+    font-size: 14px;
+    color: var(--dark-green);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* INPUTS */
+  input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 15px;
+    border: none;
+    background: var(--light-green);
+    font-size: 14px;
+  }
+
+  input::placeholder {
+    color: var(--black);
+  }
+
+  /* BUTTON */
+  button {
+    width: 100%;
+    padding: 10px;
+    background: var(--dark-green);
+    border: none;
+    border-radius: 15px;
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background: #244a40;
+  }
+}
+
+/* SMALL TEXT */
+#small-text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--violet);
+}
+
+/* QUETION */
+
+.faq-band {
+  background: linear-gradient(
+    180deg,
+    var(--light-green) 72%,
+    var(--light-yellow) 100%
+  );
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2{
+    text-align: center;
+    color: var(--white);
+    font-size: 60px;
+    max-width: 40%;
+    padding-bottom: 1rem;
+  }
+  p{
+    font-size: 20px;
+    color: var(--black);
+  }
+}
+
 .faq {
   max-width: 700px;
   margin: auto;
