@@ -8,7 +8,7 @@
   --yellow: #FBD438;
   --light-yellow: #F4F5C4;
 }
-
+/*-------------- GENERAL --------------*/
 * {
   margin: 0;
   padding: 0;
@@ -75,6 +75,15 @@ nav {
   }
 }
 
+.hero{
+  max-height: 300px;
+  padding: 150px 0px;
+  text-align: center;
+  h1{
+    margin-bottom: 40px;
+  }
+}
+
 hr{
     border: 2px solid var(--green);
 }
@@ -127,11 +136,11 @@ gap: 40px;
 }
 
 .section{
-  max-width: 85%;
-  margin: auto;
+  max-width:80%;
+  margin: 0 auto;
 }
 
-/* BLOG */  
+/*-------------- BLOG --------------*/  
 
 .blog-grid{
   display:grid;
@@ -155,4 +164,133 @@ gap: 40px;
 
 .card-tall{
   grid-row:span 2;
+}
+
+/*-------------- NEWSLETTER --------------*/
+
+/*FEATURE*/
+.features{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:40px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.feature{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.icon{
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  font-size:20px;
+}
+
+.green{
+  background-color: var(--light-green);
+}
+
+.yellow{
+  background-color: var(--light-yellow);
+}
+
+h3{
+  margin:0;
+  font-size:16px;
+  font-weight:700;
+}
+
+p{
+  margin:0;
+  font-size:14px;
+  color:#5f7a6f;
+  line-height:1.4;
+}
+
+/*FAQ*/
+.faq{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.faq-item{
+  background:white;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+
+.faq-question{
+  width:100%;
+  background:none;
+  border:none;
+  padding:20px;
+  font-size:16px;
+  font-weight:600;
+  text-align:left;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.faq-answer{
+  padding:20px;
+  border-top:2px solid var(--violet);
+  line-height:1.6;
+  display:none;
+}
+
+.faq-item.active .faq-answer{
+  display:block;
+}
+
+/* bouton + */
+.iconNews{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#7c3aed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--white);
+  font-size:20px;
+}
+
+.iconNews::before{
+  content:"+";
+}
+
+/* quand ouvert */
+.faq-item.active .iconNews{
+  background:var(--black);
+}
+
+.faq-item.active .iconNews::before{
+  content:"−";
+}
+
+/*RESPONSIVE*/
+
+@media (max-width:900px){
+  .features{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:600px){
+  .features{
+    grid-template-columns: 1fr;
+  }
 }
