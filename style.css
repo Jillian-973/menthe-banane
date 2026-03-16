@@ -215,6 +215,21 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  p {
+    max-width: 90%;
+    margin: 0;
+    font-size: 18px;
+    color: #5f7a6f;
+    line-height: 1.4;
+    font-weight: 300;
+  }
 }
 
 .icon {
@@ -235,19 +250,6 @@ footer {
   background-color: var(--light-yellow);
 }
 
-h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-p {
-  margin: 0;
-  font-size: 14px;
-  color: #5f7a6f;
-  line-height: 1.4;
-}
-
 /*-------- FAQ -------*/
 
 .newsletter h2 {
@@ -260,7 +262,7 @@ p {
 /* CARD */
 .newsletter > div {
   background: white;
-  padding:60px 10%;
+  padding: 60px 10%;
   border-radius: 18px;
   max-width: 800px;
   margin: auto;
@@ -350,25 +352,26 @@ form {
   align-items: center;
   justify-content: center;
 
-  h2{
+  h2 {
     text-align: center;
     color: var(--white);
     font-size: 60px;
     max-width: 40%;
     padding-bottom: 1rem;
   }
-  p{
+  p {
     font-size: 20px;
     color: var(--black);
   }
 }
 
 .faq {
-  max-width: 700px;
+  max-width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  text-align: left;
 }
 
 .faq-item {
@@ -380,12 +383,12 @@ form {
 
 .faq-question {
   width: 100%;
+  color: var(--dark-green);
   background: none;
   border: none;
   padding: 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  text-align: left;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -397,6 +400,7 @@ form {
   border-top: 2px solid var(--violet);
   line-height: 1.6;
   display: none;
+  font-size: 18px;
 }
 
 .faq-item.active .faq-answer {
