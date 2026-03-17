@@ -88,6 +88,10 @@ nav {
   );
 }
 
+#index-hero {
+  justify-content: space-evenly;
+}
+
 .hero-container {
   max-width: 700px;
 }
@@ -99,8 +103,15 @@ nav {
 
   span {
     font-family: "Ubuntu";
-    color: var(--dark-green);
   }
+}
+
+.light-green {
+  color: var(--light-green);
+}
+
+.dark-green {
+  color: var(--dark-green);
 }
 
 .hero-subtitle {
@@ -173,6 +184,172 @@ footer {
   margin: 4rem auto;
   padding: 4rem;
 }
+
+/*-------------- INDEX --------------*/
+
+.cta-1 {
+  padding: 19px 2rem;
+  border-radius: 30px;
+  background-color: var(--light-green);
+  font-weight: 800;
+  border: none;
+  box-shadow: 0 0px 15px var(--light-green);
+  font-size: 18px;
+}
+
+.cta-2 {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: 3px solid var(--dark-green);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/*----- CAROUSSEL ------*/
+.carousel-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(220px, 35vw, 380px);
+  height: calc(50vh - 40px);
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stack of cards */
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 62%;
+  aspect-ratio: 3/4;
+  border-radius: 18px;
+  overflow: hidden;
+  transition:
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.45s ease,
+    box-shadow 0.45s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+/* positions: prev-far | prev | active | next | next-far */
+.carousel-slide[data-pos="-2"] {
+  transform: translateX(-74%) scale(0.72);
+  opacity: 0.25;
+  z-index: 1;
+  pointer-events: none;
+}
+.carousel-slide[data-pos="-1"] {
+  transform: translateX(-52%) scale(0.84);
+  opacity: 0.55;
+  z-index: 2;
+}
+.carousel-slide[data-pos="0"] {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 4;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+.carousel-slide[data-pos="1"] {
+  transform: translateX(52%) scale(0.84);
+  opacity: 0.55;
+  z-index: 2;
+}
+.carousel-slide[data-pos="2"] {
+  transform: translateX(74%) scale(0.72);
+  opacity: 0.25;
+  z-index: 1;
+  pointer-events: none;
+}
+/* hide slides further away */
+.carousel-slide[data-pos="3"],
+.carousel-slide[data-pos="-3"],
+.carousel-slide[data-pos="4"],
+.carousel-slide[data-pos="-4"] {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+/* Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.carousel-btn:hover {
+  background: #333;
+  transform: translateY(-50%) scale(1.1);
+}
+.carousel-btn.prev {
+  left: 0;
+}
+.carousel-btn.next {
+  right: 0;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 10;
+}
+.carousel-dot {
+  width: 28px;
+  height: 9px;
+  border-radius: 999px;
+  background: #c5c5c5;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    width 0.25s;
+  padding: 0;
+}
+.carousel-dot.active {
+  background: #7c5cbf;
+  width: 36px;
+}
+
+/*----- --------- ------*/
 
 /*-------------- BLOG --------------*/
 
