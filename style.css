@@ -52,6 +52,7 @@ nav {
         border-radius: 40px;
         padding: 10px 20px;
         transition: color 0.3s;
+        font-weight: 400;
 
         &:hover {
           color: var(--white);
