@@ -7,6 +7,9 @@
   --black: #0a0a0a;
   --yellow: #fbd438;
   --light-yellow: #f4f5c4;
+  --text-muted: #7a9c7b;
+  --radius: 20px;
+  --text-mid: #3d5a3e;
 }
 /*-------------- GENERAL --------------*/
 * {
@@ -188,7 +191,6 @@ footer {
 
 /*-------------- INDEX --------------*/
 .btn {
-
   font-weight: 800;
   font-size: 18px;
   cursor: pointer;
@@ -313,12 +315,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
   transition:
     background 0.2s,
     transform 0.15s;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-   font-size: 25px;
+  font-size: 25px;
 }
 .carousel-btn:hover {
   background: #333;
@@ -359,6 +361,289 @@ footer {
 }
 
 /*----- --------- ------*/
+.hero-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  background: var(--white);
+}
+.hero-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--dark-green);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.hero-header p {
+  font-size: 0.95rem;
+  color: var(--black);
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+.hero-header .leaf-icon {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+}
+
+/* ── BIO SECTION ── */
+.bio-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.bio-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: #d4e8d0;
+  display: block;
+}
+.bio-text h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  color: var(--green-dark);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+.bio-text h3 em {
+  color: var(--dark-green);
+  font-style: normal;
+}
+.bio-text p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--black);
+  font-weight: 500;
+}
+
+/* ── SOCIAL SECTION ── */
+.social-section {
+  max-width: 1000px;
+  margin: 3.5rem auto 0;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.social-section h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--black);
+}
+.social-section > p {
+  font-size: 0.9rem;
+  color: var(--black);
+  margin: 0.5rem 0 2rem;
+  font-weight: 600;
+}
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.social-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 20px rgba(100, 180, 100, 0.08);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(100, 180, 100, 0.16);
+}
+.social-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.social-icon-wrap img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.social-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--violet);
+}
+.social-card p {
+  font-size: 0.8rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+/* ── NEWSLETTER BAND ── */
+.newsletter-band {
+  background: linear-gradient(
+    0deg,
+    var(--light-green) 0%,
+    var(--light-yellow) 62%
+  );
+  margin: 3.5rem 0 0;
+  padding: 2.5rem 1.5rem;
+}
+.newsletter-inner {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 3rem;
+  border: 5px solid var(--white);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.newsletter-text {
+  text-align: center;
+}
+.newsletter-text h2 {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--dark-green);
+  padding-bottom: 1rem;
+}
+.newsletter-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green-dark);
+  padding-bottom: 1rem;
+}
+.newsletter-text p {
+  font-size: 20px;
+  color: var(--black);
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.btn-green {
+  background: var(--dark-green);
+  color: var(--light-yellow);
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+.btn-green:hover {
+  background: var(--black);
+  transform: scale(1.03);
+}
+.newsletter-img {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #c8dfc5;
+  flex-shrink: 0;
+}
+
+/* ── BOOKS SECTION ── */
+.books-section {
+  max-width: 1000px;
+  margin: 3.5rem auto 4rem;
+  padding: 0 1.5rem;
+}
+.books-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.books-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-dark);
+}
+.books-header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.book-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(100, 180, 100, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(100, 180, 100, 0.18);
+}
+.book-cover {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: linear-gradient(135deg, #c8e6c0, #a5d6a7);
+  display: block;
+}
+.book-body {
+  padding: 1.2rem 1.4rem 1.6rem;
+}
+.book-body hr {
+  border: none;
+  border-top: 2px solid var(--green-light);
+  margin-bottom: 0.9rem;
+}
+.book-body h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+.book-body p {
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--green-dark);
+  border: 2px solid var(--green-dark);
+  border-radius: 50px;
+  padding: 0.55rem 1.4rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.btn-outline:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
 
 /*-------------- BLOG --------------*/
 
