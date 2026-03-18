@@ -209,10 +209,20 @@ footer {
   padding: 21px 2rem;
 }
 
+.cta-1:hover{
+  transform: translateY(-4px);
+  transition: 0.2s;
+}
+
 .cta-2 {
   padding: 1rem 2rem;
   border: 5px solid var(--dark-green);
   border-radius: 45px;
+}
+
+.cta-2:hover{
+  transform: translateY(-4px);
+  transition: 0.2s;
 }
 
 /*----- CAROUSSEL ------*/
@@ -403,16 +413,14 @@ footer {
   display: block;
 }
 .bio-text h3 {
+  font-family: "Lexend", sans-serif;
   font-size: clamp(1.3rem, 2.5vw, 1.9rem);
   color: var(--green-dark);
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 1rem;
 }
-.bio-text h3 em {
-  color: var(--dark-green);
-  font-style: normal;
-}
+
 .bio-text p {
   font-size: 0.9rem;
   line-height: 1.75;
@@ -566,7 +574,6 @@ footer {
   margin-bottom: 2rem;
 }
 .books-header h2 {
-  font-family: "Playfair Display", serif;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--text-dark);
@@ -613,7 +620,6 @@ footer {
   margin-bottom: 0.9rem;
 }
 .book-body h3 {
-  font-family: "Playfair Display", serif;
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-dark);
