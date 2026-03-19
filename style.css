@@ -377,13 +377,13 @@ footer {
   background: var(--white);
 }
 .hero-header h2 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: 60px;
   color: var(--dark-green);
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 .hero-header p {
-  font-size: 0.95rem;
+  font-size: 20px;
   color: var(--black);
   margin-top: 0.3rem;
   font-weight: 600;
@@ -396,16 +396,16 @@ footer {
 
 /* ── BIO SECTION ── */
 .bio-section {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 2rem auto;
   padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1.6fr;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 10rem;
+  align-items: start;
 }
 .bio-photo {
-  width: 100%;
+  height: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: var(--radius);
@@ -414,7 +414,7 @@ footer {
 }
 .bio-text h3 {
   font-family: "Lexend", sans-serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-size: 45px;
   color: var(--green-dark);
   font-weight: 700;
   line-height: 1.25;
@@ -422,10 +422,10 @@ footer {
 }
 
 .bio-text p {
-  font-size: 0.9rem;
+  font-size: 18px;
   line-height: 1.75;
   color: var(--black);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ── SOCIAL SECTION ── */
@@ -474,7 +474,7 @@ footer {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: var(--light-green);
+  background: linear-gradient(145deg,rgba(168, 221, 181, 0.8) 58%, rgb(253, 253, 253, 0.8) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,7 +493,7 @@ footer {
 .social-card p {
   font-size: 0.8rem;
   color: var(--black);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* ── NEWSLETTER BAND ── */
@@ -574,15 +574,16 @@ footer {
   margin-bottom: 2rem;
 }
 .books-header h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 800;
+  font-family: "Ubuntu";
+  font-size: 60px;
+  font-weight: 600;
   color: var(--text-dark);
 }
 .books-header p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  font-size: 20px;
+  color: var(--black);
   margin-top: 0.4rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 .books-grid {
   display: grid;
@@ -616,39 +617,40 @@ footer {
 }
 .book-body hr {
   border: none;
-  border-top: 2px solid var(--green-light);
-  margin-bottom: 0.9rem;
+  border-top: 4px solid var(--dark-green);
+  margin-bottom: 1rem;
+  margin-right: 85%;
+  border-radius: 40px;
 }
 .book-body h3 {
-  font-size: 1.05rem;
+  font-size: 24px;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--dark-green);
   margin-bottom: 0.5rem;
 }
 .book-body p {
-  font-size: 0.83rem;
-  color: var(--text-mid);
+  font-size: 16px;
+  color: var(--black);
   line-height: 1.65;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 .btn-outline {
-  background: transparent;
-  color: var(--green-dark);
-  border: 2px solid var(--green-dark);
-  border-radius: 50px;
-  padding: 0.55rem 1.4rem;
-  font-family: "Nunito", sans-serif;
+  background: var(--light-yellow);
+  color: var(--black);
+  border: none;
+  border-radius: 15px;
+  padding: 1rem 2rem;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition:
     background 0.2s,
     color 0.2s;
 }
 .btn-outline:hover {
-  background: var(--green-dark);
-  color: #fff;
+  background-color: var(--dark-green);
+  color: var(--white);
 }
 
 /*-------------- BLOG --------------*/
