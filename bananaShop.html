@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menthe-Banane</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="banana.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,17 +43,17 @@
      PRODUITS
 ══════════════════════════════════════════════════════════ -->
       <section class="shop">
-        <div class="container">
+        <div class="container-shop">
           <div class="shop-grid">
             <!-- Card 1 -->
             <article class="product-card">
               <div class="card-img-placeholder">🥗</div>
               <div class="card-body">
                 <h3>Le Guide Complet MentheBanane</h3>
-                <p>
+                <p class="card-label">
                   Transformez votre alimentation avec notre programme phare.
                 </p>
-                <ul class="features">
+                <ul class="features-shop">
                   <li>Plan alimentaire 60 jours</li>
                   <li>Recettes exclusives</li>
                   <li>Suivi personnalisé</li>
@@ -60,15 +61,7 @@
                 </ul>
                 <p class="price">
                   29.99€
-                  <small
-                    style="
-                      font-size: 0.8rem;
-                      color: var(--text-muted);
-                      font-weight: 400;
-                      text-decoration: line-through;
-                    "
-                    >49.99€</small
-                  >
+                  <small>49.99€</small>
                 </p>
                 <button class="btn-green">🛒 Acheter maintenant</button>
               </div>
@@ -82,7 +75,7 @@
                 <p>
                   Retrouvez votre énergie au quotidien grâce à l'alimentation.
                 </p>
-                <ul class="features">
+                <ul class="features-shop">
                   <li>Plan alimentaire 30 jours</li>
                   <li>Recettes simples</li>
                   <li>Conseils pratiques</li>
@@ -90,15 +83,7 @@
                 </ul>
                 <p class="price">
                   19.99€
-                  <small
-                    style="
-                      font-size: 0.8rem;
-                      color: var(--text-muted);
-                      font-weight: 400;
-                      text-decoration: line-through;
-                    "
-                    >34.99€</small
-                  >
+                  <small>34.99€</small>
                 </p>
                 <button class="btn-green">🛒 Acheter maintenant</button>
               </div>
@@ -110,7 +95,7 @@
               <div class="card-body">
                 <h3>Recettes Faciles &amp; Saines</h3>
                 <p>Plus de 100 recettes gourmandes et équilibrées.</p>
-                <ul class="features">
+                <ul class="features-shop">
                   <li>100+ recettes</li>
                   <li>Fiches nutritionnelles</li>
                   <li>Listes de courses</li>
@@ -119,12 +104,6 @@
                 <p class="price">
                   14.99€
                   <small
-                    style="
-                      font-size: 0.8rem;
-                      color: var(--text-muted);
-                      font-weight: 400;
-                      text-decoration: line-through;
-                    "
                     >24.99€</small
                   >
                 </p>
@@ -138,7 +117,7 @@
               <div class="card-body">
                 <h3>Alimentation Émotionnelle</h3>
                 <p>Comprenez et transformez votre rapport à la nourriture.</p>
-                <ul class="features">
+                <ul class="features-shop">
                   <li>Exercices guidés</li>
                   <li>Journal alimentaire</li>
                   <li>Techniques anti-stress</li>
@@ -147,12 +126,6 @@
                 <p class="price">
                   34.99€
                   <small
-                    style="
-                      font-size: 0.8rem;
-                      color: var(--text-muted);
-                      font-weight: 400;
-                      text-decoration: line-through;
-                    "
                     >54.99€</small
                   >
                 </p>
@@ -166,7 +139,7 @@
               <div class="card-body">
                 <h3>Performance Sportive &amp; Nutrition</h3>
                 <p>Optimisez vos performances grâce à la nutrition sportive.</p>
-                <ul class="features">
+                <ul class="features-shop">
                   <li>Stratégies pré/post-entraînement</li>
                   <li>Recettes protéinées</li>
                   <li>Programme 8 semaines</li>
@@ -175,12 +148,28 @@
                 <p class="price">
                   27.99€
                   <small
-                    style="
-                      font-size: 0.8rem;
-                      color: var(--text-muted);
-                      font-weight: 400;
-                      text-decoration: line-through;
-                    "
+                    >44.99€</small
+                  >
+                </p>
+                <button class="btn-green">🛒 Acheter maintenant</button>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="product-card">
+              <div class="card-img-placeholder">🧘</div>
+              <div class="card-body">
+                <h3>Performance Sportive &amp; Nutrition</h3>
+                <p>Optimisez vos performances grâce à la nutrition sportive.</p>
+                <ul class="features-shop">
+                  <li>Stratégies pré/post-entraînement</li>
+                  <li>Recettes protéinées</li>
+                  <li>Programme 8 semaines</li>
+                  <li>Accès PDF</li>
+                </ul>
+                <p class="price">
+                  27.99€
+                  <small
                     >44.99€</small
                   >
                 </p>
@@ -194,28 +183,32 @@
       <!-- ══════════════════════════════════════════════════════════
      OFFRE SPÉCIALE
 ══════════════════════════════════════════════════════════ -->
-      <div class="container">
-        <aside class="special-offer">
-          <div>
-            <h2>Pack Complet MentheBanane</h2>
-            <p>Obtenez tous nos e-books pour le prix de 3 !</p>
-            <ul>
-              <li>6 guides complets</li>
-              <li>Bonus exclusifs</li>
-              <li>Mises à jour gratuites</li>
-              <li>Accès immédiat</li>
-            </ul>
-          </div>
-          <div class="offer-pricing">
-            <span class="label">Prix normal</span>
-            <p class="old-price">219.94€</p>
-            <span class="label">Prix du pack</span>
-            <p class="new-price">89.99€</p>
-            <span class="saving">Économisez 60%</span>
-            <button class="btn-green">🛒 Obtenir le pack complet</button>
-            <p class="guarantee">✓ Garantie satisfait ou remboursé 30 jours</p>
-          </div>
-        </aside>
+      <div class="offer-back">
+        <div>
+          <aside class="special-offer section">
+            <div class="pack">
+              <h2>Pack Complet <br> Menthe Banane</h2>
+              <p>Obtenez tous nos e-books pour le prix de 3 !</p>
+              <ul>
+                <li>6 guides complets</li>
+                <li>Bonus exclusifs</li>
+                <li>Mises à jour gratuites</li>
+                <li>Accès immédiat</li>
+              </ul>
+            </div>
+            <div class="offer-pricing">
+              <span class="label">Prix normal</span>
+              <p class="old-price">219.94€</p>
+              <span class="label-2">Prix du pack</span>
+              <p class="new-price">89.99€</p>
+              <span class="saving">Économisez 60%</span>
+              <button class="btn-green">🛒 Obtenir le pack complet</button>
+              <p class="guarantee">
+                ✓ Garantie satisfait ou remboursé 30 jours
+              </p>
+            </div>
+          </aside>
+        </div>
       </div>
 
       <!-- ══════════════════════════════════════════════════════════
@@ -281,43 +274,47 @@
       <!-- ══════════════════════════════════════════════════════════
      LIVRES
 ══════════════════════════════════════════════════════════ -->
+      <!-- BOOKS -->
       <section class="books-section">
-        <div class="container">
-          <div class="books-header">
-            <h2 class="section-title">Mes Livres</h2>
-            <p class="section-sub">
-              Une sélection soigneusement choisie pour nourrir votre esprit et
-              éveiller votre âme
-            </p>
-          </div>
-          <div class="books-grid">
-            <article class="book-card">
-              <div class="book-img-placeholder">📗</div>
-              <div class="book-body">
-                <hr />
-                <h3>De la tête à l'assiette</h3>
-                <p>
-                  Découvrez comment transformer votre vie quotidienne en une
-                  aventure extraordinaire. Un guide pratique pour éveiller votre
-                  potentiel créatif et vivre pleinement.
-                </p>
-                <button>Découvrir</button>
-              </div>
-            </article>
+        <div class="books-header">
+          <h2>Mes <span class="dark-green">Livres</span></h2>
+          <p>
+            Une sélection soigneusement curatée pour nourrir votre esprit <br> et
+            éveiller votre âme
+          </p>
+        </div>
 
-            <article class="book-card">
-              <div class="book-img-placeholder">📘</div>
-              <div class="book-body">
-                <hr />
-                <h3>Ce N'était Pas Qu'une Histoire de Poids</h3>
-                <p>
-                  Découvrez comment transformer votre vie quotidienne en une
-                  aventure extraordinaire. Un guide pratique pour éveiller votre
-                  potentiel créatif et vivre pleinement.
-                </p>
-                <button>Découvrir</button>
-              </div>
-            </article>
+        <div class="books-grid">
+          <div class="book-card">
+            <img class="book-cover" src="" alt="De la tête à l'assiette" />
+            <div class="book-body">
+              <hr />
+              <h3>De la tête à l'assiette</h3>
+              <p>
+                Découvrez comment transformer votre vie quotidienne en une
+                aventure extraordinaire. Un guide pratique pour éveiller votre
+                potentiel créatif et vivre pleinement.
+              </p>
+              <button class="btn-outline">Découvrir</button>
+            </div>
+          </div>
+
+          <div class="book-card">
+            <img
+              class="book-cover"
+              src=""
+              alt="Ce n'était pas qu'une histoire de poids"
+            />
+            <div class="book-body">
+              <hr />
+              <h3>Ce n'était pas qu'une histoire de poids</h3>
+              <p>
+                Découvrez comment transformer votre vie quotidienne en une
+                aventure extraordinaire. Un guide pratique pour éveiller votre
+                potentiel créatif et vivre pleinement.
+              </p>
+              <button class="btn-outline">Découvrir</button>
+            </div>
           </div>
         </div>
       </section>

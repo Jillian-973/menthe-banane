@@ -4,12 +4,13 @@
   --dark-green: #2d5f4f;
   --violet: #7f22fe;
   --white: #fdfdfd;
-  --black: #0a0a0a;
+  --black: rgb(10, 10, 10);
   --yellow: #fbd438;
   --light-yellow: #f4f5c4;
   --text-muted: #7a9c7b;
   --radius: 20px;
   --text-mid: #3d5a3e;
+  --shadow: 0 1px 25px rgba(10, 10, 10, 0.2);
 }
 /*-------------- GENERAL --------------*/
 * {
@@ -125,8 +126,14 @@ nav {
   font-weight: 500;
 }
 
-hr {
+.hr-header {
   border: 3px solid var(--light-yellow);
+}
+
+.hr-footer{
+  border: 1px solid rgba(253, 253, 253, 0.2);
+  max-width: 95%;
+  margin: 0 auto
 }
 
 footer {
@@ -143,6 +150,35 @@ footer {
   p {
     max-width: 500px;
   }
+}
+
+.footer-midle{
+  display: flex;
+  max-width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 4rem 0;
+  color: var(--white);
+  align-items: center;
+
+  img{
+    width: 60px;
+    margin: 0 10px;
+  }
+
+  p{
+    font-size: 16px;
+  }
+
+  span{
+    color: var(--violet);
+    font-size: 24px;
+  }
+}
+
+.footer-down{
+  text-align: center;
+  padding: 4rem 0;
 }
 
 .link-container {
@@ -923,28 +959,30 @@ form {
   margin: 0 auto;
   padding: 0 24px;
 }
-.section-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  font-weight: 700;
+.container-shop {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 24px;
 }
-.section-sub {
-  color: var(--text-muted);
-  margin-top: 8px;
-  font-size: 0.95rem;
+.offer-back {
+  padding: 2rem 0rem;
+  background: linear-gradient(
+    0deg,
+    var(--light-green) 0%,
+    var(--light-yellow) 62%
+  );
 }
 
 .btn-green {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--green);
-  color: var(--white);
+  background: var(--light-green);
+  color: var(--black);
   border: none;
-  border-radius: 8px;
-  padding: 12px 22px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9rem;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition:
@@ -952,7 +990,8 @@ form {
     transform 0.15s;
 }
 .btn-green:hover {
-  background: var(--green-dark);
+  background: var(--dark-green);
+  color: var(--white);
   transform: translateY(-1px);
 }
 
@@ -965,7 +1004,6 @@ form {
   border: 2px solid var(--green);
   border-radius: 8px;
   padding: 10px 20px;
-  font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -974,31 +1012,6 @@ form {
 .btn-outline:hover {
   background: var(--green);
   color: var(--white);
-}
-
-/* ── HERO ───────────────────────────────────────────── */
-.hero {
-  background: var(--green-pale);
-  text-align: center;
-  padding: 60px 24px 48px;
-  border-bottom: 1px solid var(--border);
-}
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.15;
-}
-.hero h1 .accent {
-  color: var(--green-dark);
-}
-.hero-sub {
-  margin-top: 14px;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ── SHOP GRID ──────────────────────────────────────── */
@@ -1013,8 +1026,8 @@ form {
 
 .product-card {
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: none;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
   display: flex;
@@ -1032,13 +1045,13 @@ form {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  background: var(--green-light);
+  background: var(--light-green);
 }
 /* placeholder image when no src */
 .card-img-placeholder {
   width: 100%;
   height: 160px;
-  background: linear-gradient(135deg, var(--green-light) 0%, #a8d5b5 100%);
+  background: linear-gradient(135deg, var(--light-green) 0%, #a8d5b5 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1053,40 +1066,48 @@ form {
   gap: 10px;
 }
 .card-body h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.05rem;
+  font-size: 24px;
   font-weight: 700;
+  color: var(--dark-green);
 }
-.card-body > p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+.card-label {
+  font-size: 16px;
+  color: var(--black);
 }
 
-.features {
+.features-shop {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-top: 4px;
 }
-.features li {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+.features-shop li {
+  font-size: 14px;
+  color: var(--black);
   padding-left: 18px;
   position: relative;
 }
-.features li::before {
+.features-shop li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--green);
+  color: var(--light-green);
   font-weight: 700;
 }
 
 .price {
-  font-size: 1.4rem;
+  font-size: 36px;
   font-weight: 700;
-  color: var(--green-dark);
+  color: var(--violet);
   margin-top: auto;
+
+  small {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 400;
+    text-decoration: line-through;
+    padding-left: 2rem;
+  }
 }
 
 .card-body .btn-green {
@@ -1095,38 +1116,34 @@ form {
   margin-top: 6px;
 }
 
-/* ── 5-card layout: row of 3 then row of 2 centered ── */
-.shop-grid .product-card:nth-child(4) {
-  grid-column: 1 / 2;
-  margin-left: calc(50% + 12px);
-}
-.shop-grid .product-card:nth-child(4),
-.shop-grid .product-card:nth-child(5) {
-  grid-column: unset;
-}
-/* simpler: just use 3-col and let 4th & 5th wrap naturally, center the last row */
-/* override with a wrapper trick */
-
 /* ── SPECIAL OFFER ──────────────────────────────────── */
 .special-offer {
-  background: linear-gradient(135deg, var(--green-dark) 0%, #1e3d2b 100%);
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--white);
   border-radius: 20px;
-  margin: 0 auto 60px;
+  border: 3px solid var(--white);
+  margin: 0 auto;
   padding: 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
 }
+
+.pack{
+padding-left: 2rem;
+}
+
 .special-offer h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
+  font-size: 48px;
   font-weight: 700;
+  color: var(--dark-green);
+  text-align: left;
 }
 .special-offer > div:first-child > p {
-  margin-top: 10px;
-  opacity: 0.85;
+  margin-top: 20px;
+  color: var(--black);
+  text-align: left;
 }
 .special-offer ul {
   margin-top: 20px;
@@ -1137,14 +1154,17 @@ form {
 .special-offer ul li {
   padding-left: 22px;
   position: relative;
-  font-size: 0.9rem;
+  font-size: 18px;
   opacity: 0.9;
+  color: var(--black);
+  text-align: left;
 }
+
 .special-offer ul li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--yellow);
+  color: var(--black);
   font-weight: 700;
 }
 
@@ -1152,48 +1172,60 @@ form {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  background-color: var(--white);
+  padding: 2rem 0rem;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  justify-content: center;
+  align-items: center;
 }
 .offer-pricing .label {
-  font-size: 0.8rem;
-  opacity: 0.7;
-  text-transform: uppercase;
+  font-size: 20px;
   letter-spacing: 0.05em;
+  color: var(--black);
+  font-weight: 400;
+}
+.offer-pricing .label-2 {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  color: var(--black);
+  font-weight: 600;
 }
 .old-price {
-  font-size: 1.3rem;
+  font-size: 30px;
   text-decoration: line-through;
-  opacity: 0.6;
+  color: var(--black);
 }
 .new-price {
-  font-size: 2.8rem;
+  font-size: 60px;
   font-weight: 700;
-  color: var(--yellow);
+  color: var(--violet);
   line-height: 1;
 }
 .saving {
   display: inline-block;
-  background: var(--yellow);
-  color: var(--green-dark);
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 4px 12px;
+  background: var(--dark-green);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 15px;
   border-radius: 20px;
   width: fit-content;
   margin-bottom: 8px;
 }
 .offer-pricing .btn-green {
-  background: var(--yellow);
-  color: var(--green-dark);
+  background: var(--black);
+  color: var(--light-yellow);
   font-weight: 700;
   margin-top: 8px;
 }
 .offer-pricing .btn-green:hover {
-  background: #e6b800;
+  background: var(--light-yellow);
+  color: var(--dark-green);
 }
 .guarantee {
-  margin-top: 12px;
-  font-size: 0.82rem;
-  opacity: 0.75;
+  font-size: 14px;
+  color: var(--black);
 }
 
 /* ── WOOSKILL SECTION ───────────────────────────────── */
@@ -1344,77 +1376,6 @@ form {
   background: var(--green-dark);
 }
 
-/* ── BOOKS ──────────────────────────────────────────── */
-.books-section {
-  padding: 60px 0;
-}
-.books-header {
-  text-align: center;
-  margin-bottom: 36px;
-}
-.books-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-}
-
-.book-card {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 24px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  align-items: center;
-  padding: 20px;
-}
-.book-img-placeholder {
-  width: 120px;
-  height: 160px;
-  background: linear-gradient(160deg, var(--green-light) 0%, #a8d5b5 100%);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  flex-shrink: 0;
-}
-.book-body hr {
-  border: none;
-  border-top: 3px solid var(--green);
-  width: 40px;
-  margin-bottom: 12px;
-}
-.book-body h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.book-body p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.55;
-  margin-bottom: 16px;
-}
-.book-body button {
-  background: transparent;
-  color: var(--green);
-  border: 2px solid var(--green);
-  border-radius: 6px;
-  padding: 8px 18px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.book-body button:hover {
-  background: var(--green);
-  color: var(--white);
-}
-
 /* ── REVIEWS ────────────────────────────────────────── */
 .reviews-section {
   background: var(--green-pale);
@@ -1458,7 +1419,7 @@ form {
     grid-template-columns: repeat(2, 1fr);
   }
 
-   .shop-grid {
+  .shop-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .special-offer {
