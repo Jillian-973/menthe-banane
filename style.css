@@ -846,7 +846,7 @@ footer {
 /* ── READING TIME ── */
 .reading-time {
   font-size: 0.78rem;
-  color: var(--muted);
+  color: var(--violet);
   display: flex;
   align-items: center;
   gap: 5px;
