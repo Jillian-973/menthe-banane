@@ -14,10 +14,13 @@ body {
   color: var(--text);
   background: var(--white);
 }
-img {
+.shop{
+  img {
   display: block;
   max-width: 100%;
 }
+}
+
 ul {
   list-style: none;
 }
