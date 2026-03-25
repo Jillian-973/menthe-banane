@@ -1158,6 +1158,28 @@ form {
   transform: translateY(-1px);
 }
 
+.btn-purple {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--violet);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+.btn-purple:hover {
+  background: var(--dark-green);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -1394,7 +1416,6 @@ form {
 
 /* ── WOOSKILL SECTION ───────────────────────────────── */
 .wooskill-section {
-  background: var(--green-pale);
   padding: 56px 0;
 }
 .wooskill-inner {
@@ -1402,6 +1423,10 @@ form {
   grid-template-columns: 1fr 2fr;
   gap: 48px;
   align-items: start;
+  background: linear-gradient(90deg, var(--light-green) 92%, var(--white) 100%);
+  padding: 2rem 4rem;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
 }
 .wooskill-card {
   background: var(--white);
@@ -1410,14 +1435,13 @@ form {
   box-shadow: var(--shadow);
 }
 .wooskill-card h4 {
-  font-family: "Playfair Display", serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--green-dark);
 }
 .wooskill-card > p {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--black);
   margin-top: 8px;
 }
 .author-row {
@@ -1429,8 +1453,6 @@ form {
   border-top: 1px solid var(--border);
 }
 .author-avatar {
-  width: 44px;
-  height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--green-light), var(--green));
   display: flex;
@@ -1438,14 +1460,24 @@ form {
   justify-content: center;
   font-size: 1.2rem;
   flex-shrink: 0;
+  padding: 1rem 0;
+}
+.author-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 .author-name {
   font-weight: 600;
   font-size: 0.9rem;
+  color: var(--dark-green);
+  font-size: 16px;
 }
 .author-title {
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: var(--black);
 }
 .wooskill-card .btn-green {
   margin-top: 20px;
@@ -1455,12 +1487,11 @@ form {
 
 /* Conférences */
 .conferences h2 {
-  font-family: "Playfair Display", serif;
   font-size: 1.6rem;
   font-weight: 700;
 }
 .conferences > p {
-  color: var(--text-muted);
+  color: var(--dark-green);
   margin-top: 6px;
   font-size: 0.9rem;
 }
@@ -1482,8 +1513,8 @@ form {
 }
 .conf-tag {
   display: inline-block;
-  background: var(--green-light);
-  color: var(--green-dark);
+  background: var(--light-green);
+  color: var(--black);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 3px 10px;
@@ -1501,18 +1532,18 @@ form {
   font-size: 2rem;
 }
 .conf-card h3 {
-  font-family: "Playfair Display", serif;
   font-size: 0.95rem;
   font-weight: 700;
+  color: var(--dark-green);
 }
 .conf-card p {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: var(--dark-green);
   line-height: 1.5;
 }
 .conf-author {
   font-size: 0.78rem;
-  color: var(--green-dark);
+  color: var(--black);
   font-weight: 600;
 }
 .conf-footer {
@@ -1523,11 +1554,11 @@ form {
 }
 .conf-footer p {
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: var(--violet);
 }
 .conf-footer button {
-  background: var(--green);
-  color: var(--white);
+  background: var(--light-yellow);
+  color: var(--dark-green);
   border: none;
   border-radius: 6px;
   padding: 7px 16px;
@@ -1537,7 +1568,8 @@ form {
   transition: background 0.2s;
 }
 .conf-footer button:hover {
-  background: var(--green-dark);
+  background: var(--black);
+  color: var(--white);
 }
 
 /* ── REVIEWS ────────────────────────────────────────── */
