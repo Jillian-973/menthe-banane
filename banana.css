@@ -13,11 +13,11 @@ body {
   color: var(--text);
   background: var(--white);
 }
-.shop{
+.shop {
   img {
-  display: block;
-  max-width: 100%;
-}
+    display: block;
+    max-width: 100%;
+  }
 }
 
 ul {
